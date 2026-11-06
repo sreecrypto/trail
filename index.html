@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Astra Duel</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#080914;color:#eeeafc;font:15px system-ui;min-height:100vh;display:grid;place-items:center}main{width:min(1050px,96vw);padding:24px 0}header,footer{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}small,.label{color:#b3abd1;letter-spacing:.18em;text-transform:uppercase}h1{margin:2px 0 16px;font-size:clamp(32px,6vw,64px);line-height:1;letter-spacing:-.06em}canvas{display:block;width:100%;background:#101025}section{position:relative;border:1px solid #58497e;border-radius:12px;overflow:hidden;box-shadow:0 0 50px #58309b35}#overlay{position:absolute;inset:0;background:#09091dba;display:grid;place-content:center;text-align:center;padding:10px}#overlay[hidden]{display:none}h2{font-size:clamp(22px,5vw,52px);margin:0}p{margin:8px 0 16px}button{color:#fff;background:#302453;border:1px solid #8066a9;border-radius:7px;padding:9px 13px;font:inherit;font-weight:700;cursor:pointer;touch-action:none}button:hover,button:focus-visible{background:#5e408d}footer{margin-top:14px}.controls{display:flex;gap:5px;flex-wrap:wrap}kbd{color:#f2cc87}#status{margin:9px 0;color:#c2b9db;min-height:22px}
+</style>
+<main>
+<header><div><small>Orbital combat simulator</small><h1>ASTRA DUEL</h1></div><span class="label">Kailasa Station / First to two</span></header>
+<section>
+<canvas id="arena" width="960" height="510" aria-label="Astra Duel orbital fighting arena"></canvas>
+<div id="overlay"><div><small id="eyebrow">Choose your fighter</small><h2 id="headline">The orbital duel</h2><p id="detail">Two divine fighters. One arena in orbit.</p><button id="shiva">Play Shiva</button> <button id="vishnu">Play Vishnu</button></div></div>
+</section>
+<footer><div class="controls">
+<button data-key="KeyA"><kbd>A</kbd> Left</button><button data-key="KeyD"><kbd>D</kbd> Right</button><button data-key="KeyW"><kbd>W</kbd> Jump</button><button data-key="KeyS"><kbd>S</kbd> Guard</button><button data-key="KeyJ"><kbd>J</kbd> Strike</button><button data-key="KeyK"><kbd>K</kbd> Heavy</button><button data-key="KeyL"><kbd>L</kbd> Astra</button>
+</div><button id="menu">Fighter select</button></footer>
+<div id="status" role="status">Land attacks or guard hits to charge your Astra.</div>
+</main>
+<script src="game.js"></script>
+</html>
